@@ -16,45 +16,73 @@
     {{ /collection:brands }}
 </article>
 
-
-
-<div class="grid grid-flow-col gap-8">
-    <div>
-        <article class="mb-16">
-            {{ partial:components/heading heading="Wagonboy Studio" }}
-            {{ collection:brands slug:is="wagonboy-studio" }}
-                <a href="https://ghostfly.store" class="relative flex group w-full h-96 bg-red">
-                    <img class="w-full object-cover group-hover:scale-90 transition ease-in" src="{{banner:url}}" alt="{{ banner:alt }}" />
-                    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-20 transition"></div>
-                    <div class="absolute w-full flex justify-between left-0 bottom-0 py-4 group-hover:py-6 px-6 group-hover:px-8 transition-all">
-                        <div class="underline text-xl text-white hover:text-highlighter transition ease-out">T-Shirts & Hoodies</div>
-                        <div class="transition text-white hover:text-highlighter text-xl underline">Vist Shop</div>
-                    </div>        
-                    {{ svg src="rad/corner-sputter-tl" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -top-4 group-hover:top-2 -left-4 group-hover:left-2 transition-all delay-100" }}
-                    {{ svg src="rad/corner-sputter-tr" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -top-4 group-hover:top-2 -right-4 group-hover:right-2 transition-all delay-100" }}
-                    {{ svg src="rad/corner-sputter-br" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -bottom-4 group-hover:bottom-2 -right-4 group-hover:right-2 transition-all delay-100" }}
-                    {{ svg src="rad/corner-sputter-bl" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -bottom-4 group-hover:bottom-2 -left-4 group-hover:left-2 transition-all delay-100" }}
-                </a>
-            {{ /collection:brands }}
-        </article>
-    </div>
-    <div>
-        <article class="mb-16">
-            {{ partial:components/heading heading="Portberry's Party" }}
-            {{ collection:brands slug:is="portberrys-party" }}
-                <a href="#" class="relative flex group w-full h-96 bg-sky">
-                    <img class="pt-4 w-full object-contain group-hover:scale-90 transition ease-in" src="{{banner:url}}" alt="{{ banner:alt }}" />
-                    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-20 transition"></div>
-                    <div class="absolute w-full flex justify-between left-0 bottom-0 py-4 group-hover:py-6 px-6 group-hover:px-8 transition-all">
-                        <div class="underline text-xl text-white hover:text-highlighter transition ease-out opacity-100 group-hover:opacity-0">NFT Collection</div>
-                        <div class="transition text-white hover:text-highlighter text-xl underline opacity-0 group-hover:opacity-100">Vist Website</div>
-                    </div>        
-                    {{ svg src="rad/corner-sputter-tl" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -top-4 group-hover:top-2 -left-4 group-hover:left-2 transition-all delay-100" }}
-                    {{ svg src="rad/corner-sputter-tr" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -top-4 group-hover:top-2 -right-4 group-hover:right-2 transition-all delay-100" }}
-                    {{ svg src="rad/corner-sputter-br" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -bottom-4 group-hover:bottom-2 -right-4 group-hover:right-2 transition-all delay-100" }}
-                    {{ svg src="rad/corner-sputter-bl" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -bottom-4 group-hover:bottom-2 -left-4 group-hover:left-2 transition-all delay-100" }}
-                </a>
-            {{ /collection:brands }}
-        </article>
-    </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <article class="mb-16">
+        {{ partial:components/heading heading="Wagonboy Studio" }}
+        {{ collection:brands slug:is="wagonboy-studio" }}
+            <a href="https://ghostfly.store" class="relative flex group w-full h-96 bg-red">
+                <img class="w-full object-cover group-hover:scale-90 transition ease-in" src="{{banner:url}}" alt="{{ banner:alt }}" />
+                <div class="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-20 transition"></div>
+                <div class="absolute w-full flex justify-between left-0 bottom-0 py-4 group-hover:py-6 px-6 group-hover:px-8 transition-all">
+                    <div class="underline text-xl text-white hover:text-highlighter transition ease-out opacity-100 group-hover:opacity-0">T-Shirts & Hoodies</div>
+                    <div class="transition text-white hover:text-highlighter text-xl underline opacity-0 group-hover:opacity-100">Vist Shop</div>
+                </div>        
+                {{ svg src="rad/corner-sputter-tl" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -top-4 group-hover:top-2 -left-4 group-hover:left-2 transition-all delay-100" }}
+                {{ svg src="rad/corner-sputter-tr" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -top-4 group-hover:top-2 -right-4 group-hover:right-2 transition-all delay-100" }}
+                {{ svg src="rad/corner-sputter-br" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -bottom-4 group-hover:bottom-2 -right-4 group-hover:right-2 transition-all delay-100" }}
+                {{ svg src="rad/corner-sputter-bl" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -bottom-4 group-hover:bottom-2 -left-4 group-hover:left-2 transition-all delay-100" }}
+            </a>
+        {{ /collection:brands }}
+    </article>
+    <article class="mb-16">
+        {{ partial:components/heading heading="Portberry's Party" }}
+        {{ collection:brands slug:is="portberrys-party" }}
+            <a href="#" class="relative flex group w-full h-96 bg-sky">
+                <img class="pt-4 w-full object-contain group-hover:scale-90 transition ease-in" src="{{banner:url}}" alt="{{ banner:alt }}" />
+                <div class="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-20 transition"></div>
+                <div class="absolute w-full flex justify-between left-0 bottom-0 py-4 group-hover:py-6 px-6 group-hover:px-8 transition-all">
+                    <div class="underline text-xl text-white hover:text-highlighter transition ease-out opacity-100 group-hover:opacity-0">NFT Collection</div>
+                    <div class="transition text-white hover:text-highlighter text-xl underline opacity-0 group-hover:opacity-100">Vist Website</div>
+                </div>        
+                {{ svg src="rad/corner-sputter-tl" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -top-4 group-hover:top-2 -left-4 group-hover:left-2 transition-all delay-100" }}
+                {{ svg src="rad/corner-sputter-tr" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -top-4 group-hover:top-2 -right-4 group-hover:right-2 transition-all delay-100" }}
+                {{ svg src="rad/corner-sputter-br" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -bottom-4 group-hover:bottom-2 -right-4 group-hover:right-2 transition-all delay-100" }}
+                {{ svg src="rad/corner-sputter-bl" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -bottom-4 group-hover:bottom-2 -left-4 group-hover:left-2 transition-all delay-100" }}
+            </a>
+        {{ /collection:brands }}
+    </article>
+    <article class="mb-16">
+        {{ partial:components/heading heading="Cryptoclopse" }}
+        {{ collection:brands slug:is="cryptoclopse" }}
+            <a href="#" class="relative flex group w-full h-96 bg-sky">
+                <img class="pt-4 w-full object-contain group-hover:scale-90 transition ease-in" src="{{banner:url}}" alt="{{ banner:alt }}" />
+                <div class="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-20 transition"></div>
+                <div class="absolute w-full flex justify-between left-0 bottom-0 py-4 group-hover:py-6 px-6 group-hover:px-8 transition-all">
+                    <div class="underline text-xl text-white hover:text-highlighter transition ease-out opacity-100 group-hover:opacity-0">Crypto Blog</div>
+                    <div class="transition text-white hover:text-highlighter text-xl underline opacity-0 group-hover:opacity-100">Vist Website</div>
+                </div>        
+                {{ svg src="rad/corner-sputter-tl" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -top-4 group-hover:top-2 -left-4 group-hover:left-2 transition-all delay-100" }}
+                {{ svg src="rad/corner-sputter-tr" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -top-4 group-hover:top-2 -right-4 group-hover:right-2 transition-all delay-100" }}
+                {{ svg src="rad/corner-sputter-br" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -bottom-4 group-hover:bottom-2 -right-4 group-hover:right-2 transition-all delay-100" }}
+                {{ svg src="rad/corner-sputter-bl" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -bottom-4 group-hover:bottom-2 -left-4 group-hover:left-2 transition-all delay-100" }}
+            </a>
+        {{ /collection:brands }}
+    </article>
+    <article class="mb-16">
+        {{ partial:components/heading heading="Jealous Notebooks" }}
+        {{ collection:brands slug:is="jealous-notebooks" }}
+            <a href="https://www.amazon.com/stores/author/B09CFT8L34?ingress=0&visitId=c8f44c32-a134-4ee2-8a1a-9cc11824cfd8" class="relative flex group w-full h-96 bg-sky">
+                <img class="pt-4 w-full object-contain group-hover:scale-90 transition ease-in" src="{{banner:url}}" alt="{{ banner:alt }}" />
+                <div class="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-20 transition"></div>
+                <div class="absolute w-full flex justify-between left-0 bottom-0 py-4 group-hover:py-6 px-6 group-hover:px-8 transition-all">
+                    <div class="underline text-xl text-white hover:text-highlighter transition ease-out opacity-100 group-hover:opacity-0">Notebook Store</div>
+                    <div class="transition text-white hover:text-highlighter text-xl underline opacity-0 group-hover:opacity-100">Vist Website</div>
+                </div>        
+                {{ svg src="rad/corner-sputter-tl" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -top-4 group-hover:top-2 -left-4 group-hover:left-2 transition-all delay-100" }}
+                {{ svg src="rad/corner-sputter-tr" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -top-4 group-hover:top-2 -right-4 group-hover:right-2 transition-all delay-100" }}
+                {{ svg src="rad/corner-sputter-br" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -bottom-4 group-hover:bottom-2 -right-4 group-hover:right-2 transition-all delay-100" }}
+                {{ svg src="rad/corner-sputter-bl" class="pointer-events-none fill-white opacity-0 group-hover:opacity-100 w-24 absolute -bottom-4 group-hover:bottom-2 -left-4 group-hover:left-2 transition-all delay-100" }}
+            </a>
+        {{ /collection:brands }}
+    </article>
   </div>
