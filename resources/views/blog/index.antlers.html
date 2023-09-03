@@ -1,0 +1,19 @@
+<div class="grid grid-cols-4 gap-8">
+    <div class="col-span-3">
+        <div class="mb-12">
+            <h1 class="font-display text-4xl">Welcome to My Blog</h1>
+            <p class="font-bold tet-gray-500">If You've Read This Far, huzzah, I foresee great readings in your future!</p>
+        </div>
+        {{ taxonomy:categories }}
+            {{ if entries | count > 0 }}
+                {{ partial:cards/group coll="blog" tax="{{slug}}" heading="{{title}}" lim="4"}}
+                <div class="mt-12">
+                    {{ partial:components/button goto="blog/{{slug}}" }}
+                </div>
+            {{ /if }}
+        {{ /taxonomy:categories }}
+    </div>
+    <div class="col-span-1">
+        {{ partial:sidebar/sidebar }}
+    </div>
+</div>

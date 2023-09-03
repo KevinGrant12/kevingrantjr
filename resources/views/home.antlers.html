@@ -1,0 +1,17 @@
+<div class="grid grid-cols-4 gap-8">
+    <div class="col-span-3">
+        {{ collection:blog limit="1" sort="date:desc" }}{{ partial:cards/main }}{{ /collection:blog }}
+        {{ partial:cards/group heading="Featured Posts" coll="blog" lim="4" }}
+
+        <div class="mb-14">
+            {{ partial:components/heading heading="Hot Off the Press"}}
+            {{ collection:blog limit="3" }}
+                {{ partial:cards/base-b }}
+            {{ /collection:blog }}
+        </div>
+        {{ partial:cards/group heading="Categories" source="categories" }}
+    </div>
+    <div class="col-span-1">
+        {{ partial:sidebar/sidebar }}
+    </div>
+</div>

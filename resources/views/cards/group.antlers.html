@@ -1,0 +1,18 @@
+<div class="mb-14">
+    {{ partial:components/heading }}
+    <ul class="grid grid-cols-2 gap-4 auto-rows-auto">
+        {{ if coll }}
+            {{ collection:{coll} taxonomy:categories="{{tax}}" limit="{{lim}}" }}
+                <li>
+                    {{ partial:cards/base }}
+                </li>
+            {{ /collection:{coll} }}
+        {{ elseif source == "categories" }}
+            {{ taxonomy:categories }}
+                <li>
+                    {{ partial:cards/category }}
+                </li>
+            {{ /taxonomy:categories }}
+        {{ /if }}
+    </ul>
+</div>

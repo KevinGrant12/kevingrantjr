@@ -1,0 +1,15 @@
+name: 'Kevin Grant'
+super: true
+id: a970f670-ae4f-498a-abd3-3c0a54407963
+password_hash: $2y$10$YAlk1pg20Zd4TPtwkDfvkuBnGEWd/GsdhZJUP8sVsznCL2iwdpPv6
+preferences:
+  collections:
+    blog:
+      columns:
+        - date
+        - title
+        - summary
+        - categories
+        - tags
+        - family
+        - status

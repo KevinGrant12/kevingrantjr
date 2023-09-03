@@ -1,0 +1,82 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Main Nav */
+.main-nav .nav-icon {
+    opacity: 0;
+}
+
+.main-nav a:hover > .nav-icon,
+.main-nav a.current > .nav-icon {
+    opacity: 1;
+}
+
+
+/* Mobile */
+#mobile-nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 100%;
+    background: purple;
+    color: white;
+    padding: 2rem;
+    transition: all .3s ease;
+}
+
+#header.open #mobile-nav {
+    right: 0;
+}
+
+/* Psycho */
+@keyframes psycho {
+    0%   {
+        transform: translateX(5deg) translateY(5deg) rotateX(5deg);
+        border-radius: 5px;
+        border: 1px solid darkred;
+    }
+    25%  {
+        transform: translateX(-30deg) translateY(13deg) rotateX(15deg);
+        border-radius: 3px;
+        border-style: dashed;
+        border: 2px solid red;
+    }
+    50%  {
+        transform: translateX(10deg) translateY(7deg) rotateX(0deg);
+        border-radius: 5%;
+        border: 1px dashed purple;
+    }
+    100% {
+        transform: translateX(0deg) translateY(30deg) rotateX(-10deg);
+        border-radius: 2px;
+        border: 2px solid red;
+    }
+}
+
+.psycho::before,
+.psycho > .psycho-card-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    opacity: 60%;
+    transform: scale(1.01) skewX(1deg);
+    animation: psycho .8s linear infinite;
+}
+
+.psycho::after,
+.psycho > .psycho-card-child::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 40%;
+    transform: skewX(-1deg);
+    animation: psycho .3s linear infinite reverse;
+}

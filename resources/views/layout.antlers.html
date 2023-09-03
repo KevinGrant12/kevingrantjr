@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title ?? site:name }}</title>
+        {{ vite src="resources/js/site.js|resources/css/site.css" }}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Staatliches&family=Barriecito&family=Special+Elite&display=swap" rel="stylesheet">
+    </head>
+    <body class="bg-gray-100 font-sans leading-normal text-gray-800">
+        <header id="header">
+            <div class="container mx-auto px-4 lg:px-0 flex justify-between items-center">
+                <a href="/" class="flex items-center">
+                    <img src="{{ brand:logo }}" alt="{{ brand:logo:alt }}" width="50px" class="mr-4">
+                    <div>
+                        <p class="font-display text-3xl">Kevin Michael Grant Jr.</p>
+                        <p class="font-psycho text-2xl text-red-600 leading-4">memior of a human</p>
+                    </div>
+                </a>
+    
+                {{# View: Desktop #}}
+                <nav class="hidden md:block">
+                    <ul class="main-nav flex">
+                        {{ nav:main_nav }}
+                          <li>
+                                <a
+                                    href="{{ url }}"
+                                    class="block px-3 pt-8 pb-1 flex flex-col items-center {{ if is_current || is_parent }}current bg-black text-white{{ else }}hover:bg-black hover:text-white{{ /if }}"
+                                >
+                                    <img src="{{ icon }}" alt="" class="nav-icon h-8 pb-2">
+                                    {{ title }}
+                                </a>
+                          </li>
+                        {{ /nav:main_nav }}
+                      </ul>
+                </nav>
+    
+                {{# View: Mobile #}}
+                <div id="nav-toggle" class="md:hidden">Nav Toggle</div>
+
+                {{# Sidnav #}}
+                <nav id="mobile-nav" class="md:hidden">
+                    <ul class="flex flex-col">
+                        {{ nav:main_nav }}
+                            <li>
+                                <a
+                                    href="{{ url }}"
+                                    class="flex items-center px-2 {{ if is_current || is_parent }}current bg-black text-white{{ else }}hover:bg-black hover:text-white{{ /if }}">
+                                    <div class="flex justify-center w-12 mr-4">
+                                        <img src="{{ icon }}" alt="" class="nav-icon mobile-nav-icon" data-index={{index}}>
+                                    </div>
+                                    {{ title }}
+                                </a>
+                            </li>
+                        {{ /nav:main_nav }}
+                      </ul>
+                </nav>
+
+            </div>
+        </header>
+        <div class="container mx-auto px-4 lg:px-0 py-12">
+            {{ template_content }}
+        </div>
+        <footer>
+            <div class="container mx-auto px-4 sm:px-0 border-t-2">
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="flex items-center">
+                        <img src="{{ brand:logo }}" alt="{{ brand:logo:alt }}" width="50px" class="mr-4">
+                        <p class="font-display text-3xl">Newsletter</p>
+                    </div>
+                    <div>
+                        <nav>
+                            <ul class="flex flex-col">
+                                {{ nav include_home="true" }}
+                                    <li>
+                                        <a
+                                            href="{{ url }}"
+                                            {{ if is_current || is_parent }}
+                                                class="px-2 py-1 current text-blue"
+                                            {{ else }}
+                                                class="px-2 py-1 current hover:text-blue"
+                                            {{ /if }}
+                                        >
+                                            {{ title }}
+                                        </a>
+                                    </li>
+                                {{ /nav }}
+                            </ul>
+                        </nav>
+                    </div>
+                    <div>
+                        test
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

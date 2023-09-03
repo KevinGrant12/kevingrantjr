@@ -1,0 +1,38 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Title
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: icon_field
+            field:
+              type: icon
+              display: Icon
+              icon: icon_picker
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: link
+            field:
+              type: link
+              display: Link
+              icon: link
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

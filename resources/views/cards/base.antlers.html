@@ -1,0 +1,13 @@
+<a href="{{ url }}" class="relative h-full flex flex-col bg-white rounded-md psycho-card group">
+    <img src="https://placehold.co/800x400" alt="">
+    <div class="relative p-4 psycho-card-child grow">
+        <h3 class="font-display text-xl">{{ title }}</h3>
+        <p>{{ summary | truncate(120, '...') }}</p>
+        <div class="relative flex items-center">
+            <div class="bg-white mt-3 mb-2 mr-2">Read Article</div>
+            <div class="overflow-hidden">
+                {{ svg src="rad/arrow-short-sputter-right" class="fill-current w-14 -translate-x-full group-hover:translate-x-0 transition" }}
+            </div>
+        </div>
+    </div>
+</a>

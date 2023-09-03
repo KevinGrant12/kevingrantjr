@@ -1,0 +1,35 @@
+tree:
+  -
+    id: 48d2a7c9-65ac-47f2-8d9c-64256b5d6b44
+    entry: home
+    data:
+      icon: global/totem/totem-1.png
+  -
+    id: c9f846f2-381a-46e8-ba35-a49f02055061
+    entry: c17fa16f-9da9-4890-9dab-194a649e2054
+    data:
+      icon: global/totem/totem-2.png
+    children:
+      -
+        id: 8afc071a-c475-4e92-aebc-e8b1125e4b0d
+        entry: 338be8bf-29df-4367-bff3-f333ffbd2e84
+  -
+    id: e22e9a16-ad5f-43f0-9e00-b92f7fe8bdef
+    entry: 70cf43bf-1fb0-4352-8568-c0f032be276e
+    data:
+      icon: global/totem/totem-3.png
+  -
+    id: baf71d0f-7ef9-455a-895b-a3d5ba9a8355
+    entry: 4b0c3fc5-62ac-4c59-a98c-5a804aca437a
+    data:
+      icon: global/totem/totem-4.png
+  -
+    id: d661fd81-8592-4699-9105-7782747835ef
+    entry: d127e8f6-d472-40b2-89a4-3039415580f0
+    data:
+      icon: global/totem/totem-5.png
+  -
+    id: a1ff514f-cfa2-483c-b2d7-886a05d2bd83
+    entry: d162b4dd-a5ad-4033-8adf-be2695e0da67
+    data:
+      icon: global/totem/totem-6.png

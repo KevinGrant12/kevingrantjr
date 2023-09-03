@@ -1,0 +1,9 @@
+<a href="{{goto}}" class="relative inline-flex items-center transition-all group px-2">
+    <div class="absolute top-0 left-0 w-full h-full group-hover:scale-90 bg-white transition"></div>
+    <div class="relative w-12 h-6 mr-2 group-hover:mr-3 transition-all">
+        {{ svg src="rad/skull-2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 opacity-100 group-hover:opacity-0 transition"  }}
+        {{ svg src="rad/skull-3" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 opacity-0 group-hover:opacity-100 transition"  }}
+    </div>
+    <div class="relative mt-4 mr-2 text-gray-500 group-hover:text-red-500 font-bold text-3xl transiation-all font-psycho">View All In {{ title }}</div>
+    {{ svg src="rad/arrowhead-full-right" class="absolute top-1/2 right-0 group-hover:-right-3 -translate-y-1/2 w-3 opacity-0 group-hover:opacity-100 transition-all delay-100" }}
+</a>

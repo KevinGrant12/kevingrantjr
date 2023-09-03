@@ -1,0 +1,38 @@
+<article class="bg-white rounded-md overflow-hidden group mb-14">
+    <a href="{{ url }}" class="relative flex flex-col">
+
+        {{# Image #}}
+        <div class="relative">
+            <div class="h-80 group-hover:h-72 transition-all">
+                <img class="object-cover h-full w-full" src="https://placehold.co/800x400" alt="">
+            </div>
+            <div class="absolute bottom-2 right-2 flex flex-col items-end justify-center">
+                <div class="flex items-center">
+                    {{ categories }}
+                        <div class="flex items-center bg-black text-white rounded-xl px-3 mr-1 mb-2">{{ title }}</div>
+                    {{ /categories }}
+                </div>
+                <div class="flex items-center">
+                    {{ tags }}
+                        <div class="flex items-center bg-gray-500 text-white rounded-xl px-3 mr-1 mb-2">{{ title }}</div>
+                    {{ /tags }}
+                </div>
+            </div>
+        </div>
+
+        {{# Content #}}
+        <div class="p-4 group-hover:pt-8 transition-all">
+            <div>
+                <h3 class="font-display text-4xl mb-1">{{ title }}</h3>
+                <p>{{ summary }}</p>
+            </div>
+            <div class="relative flex items-center group-hover:pt-4 transition-all">
+                <div class="bg-white mt-4 mr-2 text-gray-400 group-hover:text-red font-bold text-3xl transiation-all font-psycho">Read Article</div>
+                <div class="overflow-hidden pt-1">
+                    {{ svg src="rad/arrow-long-sputter-right" class="fill-current text-teal w-48 -translate-x-full group-hover:translate-x-0 transition" }}
+                </div>
+                <div class="ml-2 transition-opacity group-hover:delay-1000 opacity-0 group-hover:opacity-100 font-psycho text-red text-xl">Go Bitch!</div>
+            </div>
+        </div>
+    </a>
+</article>

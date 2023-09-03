@@ -1,0 +1,25 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Media
+        fields:
+          -
+            handle: logo
+            field:
+              max_files: 1
+              mode: list
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Logo
+              icon: assets
+              listable: true
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              container: assets
+              folder: global
